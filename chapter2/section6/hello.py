@@ -1,8 +1,10 @@
-import os, sys
+import os
+import sys
+
 
 def main():
-    print [item for item in os.listdir('.') if item.endswith('.py')];
-    print sys.version
+    print([item for item in os.listdir('.') if item.endswith('.py')])
+    print(sys.version)
 
 
 if __name__ == '__main__':
