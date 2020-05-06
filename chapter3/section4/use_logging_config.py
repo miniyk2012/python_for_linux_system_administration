@@ -5,8 +5,9 @@ import logging.config
 
 logging.config.fileConfig('logging.cnf')
 
-logging.debug('debug message')
-logging.info('info message')
-logging.warn('warn message')
-logging.error('error message')
-logging.critical('critical message')
+logger = logging.getLogger('root')
+logger.debug('debug message')
+logger.info('info message')
+logger.warn('warn message')
+logger.error('error message')
+logger.critical('critical message')

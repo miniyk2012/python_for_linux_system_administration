@@ -2,19 +2,26 @@
 keys = root
 
 [handlers]
-keys = logfile
+keys = logfile,consoleHandler
 
 [formatters]
 keys = generic
 
 [logger_root]
-handlers = logfile
+level = DEBUG
+handlers = consoleHandler,logfile
 
 [handler_logfile]
 class = handlers.TimedRotatingFileHandler
 args = ('app.log', 'midnight', 1, 10)
+level = INFO
+formatter = generic
+
+[handler_consoleHandler]
+class = StreamHandler
 level = DEBUG
 formatter = generic
+args = (sys.stdout,)
 
 [formatter_generic]
 format = %(asctime)s %(levelname)-5.5s [%(name)s:%(lineno)s] %(message)s

@@ -1,0 +1,4 @@
+2020-05-06 14:09:26,920 INFO  [root:10] info message
+2020-05-06 14:09:26,920 WARNI [root:11] warn message
+2020-05-06 14:09:26,920 ERROR [root:12] error message
+2020-05-06 14:09:26,920 CRITI [root:13] critical message
